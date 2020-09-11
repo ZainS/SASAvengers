@@ -9,13 +9,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { NewAvengerComponent } from './new-avenger/new-avenger.component';
+import { AvengereditComponent } from './avengeredit/avengeredit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AvengerDetailComponent,
     AvengersListComponent,
-    NewAvengerComponent
+    NewAvengerComponent,
+    AvengereditComponent
   ],
   imports: [
     BrowserModule,

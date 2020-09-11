@@ -7,8 +7,10 @@
         <div><span>year: </span>{{avenger.year}}</div>
         <div><span>Years Since Joining: </span>{{avenger.yearsSinceJoining}}</div>
         <div><span>honorary: </span>{{avenger.honorary}}</div>
-        <div><span>notes: </span>{{avenger.notes}}</div>
-        <a routerLink="/home">BACK</a>
+        <div><span>NOTES: </span>{{avenger.notes}}</div>
+        <button [routerLink]="['/edit',avenger.id]">Edit Information</button> 
+        <div><a routerLink="/home">BACK</a></div>
+        
     </div>
 
    
