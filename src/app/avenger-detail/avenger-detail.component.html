@@ -1,6 +1,6 @@
     
     <div *ngIf = "avenger" class="container">
-        <h1>{{avenger.name | uppercase}}</h1>
+        <h2>{{avenger.name | uppercase}}</h2>
         <h3>Details</h3>
         <div><span>APPEARANCES: </span>{{avenger.appearances}}</div>
         <div><span>CURRENT: </span>{{avenger.current}} <span></span><button class="btn btn-secondary" (click)="isCurrent(avenger)">IS ACTIVE</button></div>
