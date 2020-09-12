@@ -25,5 +25,4 @@ export class AvengersListComponent implements OnInit {
   onSelect(avenger){
     this.avenger = avenger
   }
-
 }

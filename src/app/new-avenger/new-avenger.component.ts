@@ -11,7 +11,6 @@ import { Location } from '@angular/common';
 export class NewAvengerComponent implements OnInit {
 
   registerForm: FormGroup;
-  Current: any= ["YES", "NO"];
   constructor(private formBuilder: FormBuilder, 
     private avengerService: AvengerService, 
     private location: Location) { }
