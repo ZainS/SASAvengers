@@ -7,7 +7,7 @@ import { AvengereditComponent } from './avengeredit/avengeredit.component';
 
 const routes: Routes = [
   {path: "home", component: AvengersListComponent},
-  {path: "detail/:id", component: AvengerDetailComponent},
+  // {path: "detail/:id", component: AvengerDetailComponent},
   {path: "edit/:id", component: AvengereditComponent},
   {path: "newAvenger", component: NewAvengerComponent},
   {path: "", redirectTo: "home", pathMatch: "full"}

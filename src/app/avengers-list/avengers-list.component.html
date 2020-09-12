@@ -1,11 +1,19 @@
 <div class="container">
-<h2 class="row justify-content-md-center">Avengers</h2>
-<div><a routerLink="/newAvenger">ADD NEW AVENGER</a></div>
-<ul class="heroes">
-  <li *ngFor="let avenger of avengers" style="list-style-type: none">
-    <h3 class= "col-12">{{avenger.name}} </h3>
-    <button class="btn btn-primary col-6" [routerLink]="['/detail',avenger.id]">More Info</button> 
-    <button class = "btn btn-danger col-6" (click)="delete(avenger)">DELETE</button>
-  </li>
-</ul>
+  <div class="row">
+    <div class="col-6">
+      <h2 class="row justify-content-md-center">AVENGERS</h2>
+      <button class="btn btn-outline-success col-6" routerLink="/newAvenger">ADD NEW AVENGER</button>
+      <ul class="heroes">
+        <li *ngFor="let avenger of avengers" style="list-style-type: none">
+          <h3 class= "col-12">{{avenger.name}} </h3>
+          <!-- <button class="btn btn-primary col-6" [routerLink]="['/detail',avenger.id]">More Info</button>  -->
+          <button class="btn btn-info col-6" (click)="onSelect(avenger)">More Info</button>
+          <button class = "btn btn-danger col-6" (click)="delete(avenger)">DELETE</button>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6">
+      <app-avenger-detail [avenger] = "avenger"></app-avenger-detail>
+    </div>
+  </div>
 </div>

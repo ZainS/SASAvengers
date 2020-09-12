@@ -10,7 +10,7 @@ import { AvengerService } from '../hero/avenger.service';
 export class AvengersListComponent implements OnInit {
 
   avengers : Avenger[];
-  
+  avenger: Avenger;
   constructor(private avengerService: AvengerService){}
 
   ngOnInit(){
@@ -21,4 +21,9 @@ export class AvengersListComponent implements OnInit {
     this.avengers = this.avengers.filter(a => a !== avenger);
     this.avengerService.delete(avenger).subscribe();
   }
+
+  onSelect(avenger){
+    this.avenger = avenger
+  }
+
 }

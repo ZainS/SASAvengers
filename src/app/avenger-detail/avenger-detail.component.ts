@@ -9,28 +9,21 @@ import { Location } from '@angular/common';
   styleUrls: ['./avenger-detail.component.css']
 })
 export class AvengerDetailComponent implements OnInit {
-  avenger:Avenger;
+  @Input() avenger:Avenger;
   data:Avenger[];
   constructor(private avengerService: AvengerService, private route: ActivatedRoute,
     private router: Router, private location: Location) { }
 
   ngOnInit(): void {
-    let id = this.route.snapshot.paramMap.get("id");
-    this.avengerService.getList()
-    .subscribe(data => {
-      this.data = data
-      this.assignAvenger(id)
-    })
   }
-  goBack(): void {
-    this.location.back();
-  }
+
   isCurrent(avenger){
     avenger.current=='YES'?avenger.current='NO':avenger.current='YES'
-    this.avengerService.edit(avenger).subscribe(()=>this.goBack());
+    this.avengerService.edit(avenger).subscribe();
+  }
+
+  clear(){
+    this.avenger = null; 
   }
  
-  assignAvenger(id){
-    this.avenger = this.data.find(avenger => avenger.id == id);
-  }
 }
