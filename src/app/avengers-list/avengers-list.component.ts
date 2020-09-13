@@ -20,6 +20,7 @@ export class AvengersListComponent implements OnInit {
   delete(avenger){
     this.avengers = this.avengers.filter(a => a !== avenger);
     this.avengerService.delete(avenger).subscribe();
+    this.avenger = null;
   }
 
   onSelect(avenger){
