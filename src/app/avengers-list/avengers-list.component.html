@@ -5,7 +5,7 @@
       <button class="btn btn-outline-success" style ="margin-left: 2em;" routerLink="/newAvenger">ADD NEW AVENGER</button>
       <ul class="heroes">
         <li *ngFor="let avenger of avengers" style="list-style-type: none">
-          <h3 class= "col-12">{{avenger.name}} </h3>
+          <h3 class= "col-12"><a [href] = 'avenger.url'>{{avenger.name}} </a></h3>
           <button class="btn btn-info col-6" (click)="onSelect(avenger)">More Info</button>
           <button class = "btn btn-danger col-6" (click)="delete(avenger)">DELETE</button>
         </li>
