@@ -13,7 +13,6 @@ export class AvengereditComponent implements OnInit {
   changeForm: FormGroup
   avenger:Avenger;
   data:Avenger[];
-  CurrentValue: ['YES', 'NO'];
 
   constructor(private avengerService: AvengerService, private route: ActivatedRoute,
     private router: Router, private location: Location, private formBuilder: FormBuilder) { }

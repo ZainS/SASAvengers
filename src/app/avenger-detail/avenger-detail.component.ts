@@ -11,9 +11,8 @@ import { Output, EventEmitter } from '@angular/core';
 })
 export class AvengerDetailComponent implements OnInit {
   @Input() avenger:Avenger;
-  data:Avenger[];
-  constructor(private avengerService: AvengerService, private route: ActivatedRoute,
-    private router: Router, private location: Location) { }
+
+  constructor(private avengerService: AvengerService) { }
 
   ngOnInit(): void {
   }
