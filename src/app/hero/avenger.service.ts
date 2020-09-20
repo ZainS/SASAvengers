@@ -29,7 +29,6 @@ export class AvengerService {
     // add code to delete
     const id = typeof avenger === 'number' ? avenger : avenger.id;
     const url = `${this.avengerURL}/${id}`;
-    console.log(url)
     return this.http.delete<Avenger>(url, this.httpOptions);
   }
 

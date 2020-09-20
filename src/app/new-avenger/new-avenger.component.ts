@@ -18,7 +18,7 @@ export class NewAvengerComponent implements OnInit {
   ngOnInit(): void {
     this.registerForm =this.formBuilder.group({
       url : [],
-      name : [],
+      name : ['' , Validators.required],
       appearances: [],
       current: [],
       gender: [],
